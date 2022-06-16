@@ -1,0 +1,135 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Belleza&display=swap');
+
+:root {
+    --100: #e0f2fe;
+    --200: #bae6fd;
+    --300: #7dd3fc;
+    --400: #38bdf8;
+    --700: #0369a1;
+    --900: #0c4a6e;
+    /* Tailwind color scheme sky */
+
+    font-family: 'Belleza', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: aliceblue;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    min-height: 100vh;
+    background-color: var(--100);
+}
+
+h1,h2,p {
+    margin: 0;
+    padding: 3px;
+}
+
+h2 {
+    font-size: 1.7rem
+}
+
+.top {
+    height: 100px;
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--200);
+    border-bottom: 3px solid black;
+}
+
+
+
+
+.book-card {
+    width: 250px;
+    background-color: var(--300);
+    border: 2px solid black;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.book-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: max-content;
+    gap: 10px;
+    padding: 20px;
+}
+
+
+
+.delete, .change {
+    height: 30px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.delete:hover, .change:hover{
+    background-color: var(--100);
+    cursor: pointer;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+
+
+
+.add-book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-book-box{
+    width: 80%;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 50%;
+    background-color: var(--200);
+}
+.add-book-box-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    margin-bottom: 20px;
+    height: 30px;
+}
+
+
+
+#book-pages {
+    width: 100px;
+}
+
+
+/* Used to hide the arrows for inputs type number */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.add-book-button {
+    width: 150px;
+    height: 30px;
+}
